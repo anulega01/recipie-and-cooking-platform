@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - My Recipe Website</title>
+    <style>
+        body {
+    background-color: #a95c68;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Add some basic styling for the recipe container */
+.recipe {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.recipe h3 {
+    color: #333;
+}
+
+.recipe p {
+    margin: 5px 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Recipe Website</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="recipe.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="button" onclick="login()">Login</button>
+            </form>
+            <p id="loginMessage"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Recipe Website</p>
+    </footer>
+
+    <script>
+        // Your existing JavaScript code
+
+// Function to handle login
+function login() {
+    // Get the username and password
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Replace this with your actual login logic (e.g., send a request to the server)
+    // For simplicity, let's assume a successful login for any non-empty username and password
+    if (username && password) {
+        document.getElementById('loginMessage').textContent = 'Successfully logged in!';
+    } else {
+        document.getElementById('loginMessage').textContent = 'Invalid username or password.';
+    }
+}
+
+    </script>
+</body>
+</html>
